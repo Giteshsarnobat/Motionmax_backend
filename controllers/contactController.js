@@ -46,7 +46,7 @@ function formatToIST(mysqlDatetime) {
   const ampm      = hourParts[1] || '';        // 'AM' or 'PM' — always uppercase
 
   // ✅ Final format: "22 Mar 2026, 02:45:30 PM"
-  return `${day} ${month} ${year}, ${hh}:${minute}:${second} ${ampm}`;
+  return `${day} ${month} ${year}`;
 }
 
 // ── INSERT CONTACT ────────────────────────────────────────────────────────────
