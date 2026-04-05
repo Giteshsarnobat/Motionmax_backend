@@ -26,10 +26,10 @@ const pool = mysql.createPool({
     conn.release();
   } catch (err) {
     console.error("❌ MySQL connection failed:", err.message);
-    console.log(`DB_HOST: ${DB_HOST}`);
-    console.log(`DB_PORT: ${DB_PORT}`);
-    console.log(`DB_USER: ${DB_USER}`);
-    console.log(`DB_NAME: ${DB_NAME}`);
+    console.log(`DB_HOST: ${process.env.DB_HOST}`);
+    console.log(`DB_PORT: ${process.env.DB_PORT}`);
+    console.log(`DB_USER: ${process.env.DB_USER}`);
+    console.log(`DB_NAME: ${process.env.DB_NAME}`);
     process.exit(1);
   }
 })();
