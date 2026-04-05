@@ -19,9 +19,17 @@ const pool = mysql.createPool({
   try {
     const conn = await pool.getConnection();
     console.log("✅ MySQL connected successfully");
+    console.log(`DB_HOST: ${DB_HOST}`);
+    console.log(`DB_PORT: ${DB_PORT}`);
+    console.log(`DB_USER: ${DB_USER}`);
+    console.log(`DB_NAME: ${DB_NAME}`);
     conn.release();
   } catch (err) {
     console.error("❌ MySQL connection failed:", err.message);
+    console.log(`DB_HOST: ${DB_HOST}`);
+    console.log(`DB_PORT: ${DB_PORT}`);
+    console.log(`DB_USER: ${DB_USER}`);
+    console.log(`DB_NAME: ${DB_NAME}`);
     process.exit(1);
   }
 })();
